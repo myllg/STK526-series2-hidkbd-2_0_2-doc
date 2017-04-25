@@ -98,7 +98,7 @@
       //! @defgroup STK_5226_joy Joystick Management
       //! Macros to manage Joystick on stk526
       //! @{
-#define  Joy_init()              (DDRB &= ~((1<<PINB7)|(1<<PINB6)|(1<<PINB5)|(1<<PINB4)|(1<<PINB0)), PORTB |= ((1<<PINB7)|(1<<PINB6)|(1<<PINB5)|(1<<PINB4)|(1<<PINB0)))
+#define  Joy_init()              (DDRB &= ~((1<<PINB7)|(1<<PIND2)|(1<<PINB5)|(1<<PINB4)|(1<<PINB0)), PORTB |= ((1<<PINB7)|(1<<PIND2)|(1<<PINB5)|(1<<PINB4)|(1<<PINB0)))
 #define  Push_button_init()      Joy_init()
                                 
 #define  Is_btn_left()           Is_hwb()
@@ -106,7 +106,7 @@
 #define  Is_btn_right()          FALSE
 
 #define  Is_joy_down()           ((PINB & (1<<PINB7)) ?  FALSE : TRUE)
-#define  Is_joy_right()          ((PINB & (1<<PINB6)) ?  FALSE : TRUE)
+#define  Is_joy_right()          ((PINB & (1<<PIND2)) ?  FALSE : TRUE)
 #define  Is_joy_up()             ((PINB & (1<<PINB5)) ?  FALSE : TRUE)
 #define  Is_joy_left()           ((PINB & (1<<PINB4)) ?  FALSE : TRUE)
                                 
@@ -115,7 +115,7 @@
 #define  Is_btn_not_right()      TRUE
 
 #define  Is_joy_not_down()       ((PINB & (1<<PINB7)) ?  TRUE : FALSE)
-#define  Is_joy_not_right()      ((PINB & (1<<PINB6)) ?  TRUE : FALSE)
+#define  Is_joy_not_right()      ((PINB & (1<<PIND2)) ?  TRUE : FALSE)
 #define  Is_joy_not_up()         ((PINB & (1<<PINB5)) ?  TRUE : FALSE)
 #define  Is_joy_not_left()       ((PINB & (1<<PINB4)) ?  TRUE : FALSE)
 
